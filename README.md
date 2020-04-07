@@ -51,6 +51,8 @@ Commands:
 ## API
 
 ```python
+import rddlgym
+
 # create RDDLGYM environment
 <<<<<<< HEAD
 rddl_id = "Navigation-v3" # see available RDDL with "$ rddlgym ls" command
