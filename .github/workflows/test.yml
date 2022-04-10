@@ -1,0 +1,24 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+        with:
+          python-version: '3.10'
+          architecture: 'x64'
+      - run: pip install -r requirements.txt
+      - run: pip install pytest==7.1.1
+      - run: pytest tests/*.py -sv --disable-warnings
+      # TODO add coverage

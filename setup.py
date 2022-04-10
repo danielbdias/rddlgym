@@ -47,7 +47,7 @@ setup(
         "pandas==1.4.2",
         "matplotlib==3.5.1",
         "pyrddl==0.1.10",
-        # "rddl2tf",
+        # "git+https://github.com/danielbdias/rddl2tf.git@main#egg=rddl2tf",
     ],
     include_package_data=True,
     zip_safe=False,

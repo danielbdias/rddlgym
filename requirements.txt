@@ -4,4 +4,4 @@ matplotlib==3.5.1
 tensorflow==2.8.0
 gym==0.23.1
 pyrddl==0.1.10
-#rddl2tf for tests?
+git+https://github.com/danielbdias/rddl2tf.git@main#egg=rddl2tf
