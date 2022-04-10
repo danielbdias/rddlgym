@@ -19,6 +19,7 @@
 import os
 from setuptools import setup, find_packages
 
+import rddlgym
 
 def read(filename):
     filepath = os.path.join(os.path.dirname(__file__), filename)
@@ -28,7 +29,7 @@ def read(filename):
 
 setup(
     name="rddlgym",
-    version=read("version.txt"),
+    version=rddlgym.__version__,
     author="Thiago P. Bueno",
     author_email="thiago.pbueno@gmail.com",
     description="rddlgym: A toolkit for working with RDDL domains in Python3.",
@@ -41,12 +42,12 @@ setup(
     scripts=["scripts/rddlgym"],
     python_requires=">=3.6",
     install_requires=[
-        "tensorflow<2.0",
-        "gym",
-        "pandas",
-        "matplotlib",
-        "pyrddl",
-        "rddl2tf",
+        "tensorflow==2.8.0",
+        "gym==0.23.1",
+        "pandas==1.4.2",
+        "matplotlib==3.5.1",
+        "pyrddl==0.1.10",
+        # "rddl2tf",
     ],
     include_package_data=True,
     zip_safe=False,
