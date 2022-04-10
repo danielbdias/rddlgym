@@ -25,5 +25,7 @@ AST = Mode.AST
 SCG = Mode.SCG
 GYM = Mode.GYM
 
+__version__ = 'v0.5.15'
+__release__ = 'v0.5.15-alpha'
 
 __all__ = ["Trajectory", "Runner", "make", "load", "RAW", "AST", "SCG", "GYM"]
