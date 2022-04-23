@@ -12,7 +12,10 @@ docs:
 	sphinx-build docs docs/_build/html
 
 test:
-	@pytest tests/*.py -sv --disable-warnings 2>/dev/null
+	pytest tests/*.py -sv --disable-warnings 2>/dev/null
+
+test/quiet:
+	pytest tests/*.py --quiet --disable-warnings 2>/dev/null
 
 publish:
 	python3 setup.py sdist bdist_wheel
